@@ -5,15 +5,14 @@ import bgCircule from '../../assets/circulo.png'
 const Calculator = () => {
     const { darkMode, setDarkMode } = useContext(MyContext)
     const [resultado, setResultado] = useState()
-    console.log(darkMode)
 
     return (
-        <div
-            className={`${
-                darkMode === true ? 'bg-black' : 'bg-gray-200/20'
-            }  min-h-full `}
-        >
-            <div className="bg-[url('../assets/circulo.png')] m-auto grid grid-cols-1 grid-rows-auto content-start w-full rounded-3xl">
+        <div className="w-full min-h-screen flex justify-center items-center">
+            <div
+                className={`${
+                    darkMode === true ? 'bg-black' : 'bg-gray-100'
+                }  w-11/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-3/12 2xl:w-1/6  m-auto grid grid-cols-1 grid-rows-auto content-start rounded-3xl shadow-[5rem_5rem_10rem_1rem_rgba(0,0,0,0.3)] shadow-blue-400 drop-shadow-md`}
+            >
                 <button
                     className="bg-[#28b4ff] shadow-[#28b4ff]/50 w-8 h-8 m-5 rounded-full flex items-center justify-center justify-self-end text-white shadow-lg"
                     onClick={() =>
@@ -49,7 +48,7 @@ const Calculator = () => {
                 {/*opções*/}
                 <div></div>
                 {/*Teclado*/}
-                <div className="  m-auto border w-10/12 tablet:w-5/12 p-1 grid grid-cols-4 gap-2 justify-items-center">
+                <div className="  m-auto p-1 grid grid-cols-4 gap-2 justify-items-center">
                     <button
                         className={`${
                             darkMode === true
@@ -187,7 +186,7 @@ const Calculator = () => {
                             darkMode === true
                                 ? 'bg-blue-600 text-blue-300'
                                 : 'bg-[#0b8dff57] text-[#0088ff]'
-                        }   relative bottom-6 w-14 h-24  rounded-lg text-cyan-500  font-semibold text-xl shadow-md focus:outline  focus:outline-1 focus:outline-cyan-500/45`}
+                        }   relative bottom-6 w-14 h-20  rounded-lg text-cyan-500  font-semibold text-xl shadow-md focus:outline  focus:outline-1 focus:outline-cyan-500/45`}
                     >
                         =
                     </button>
